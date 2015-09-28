@@ -11,11 +11,6 @@ from ConfigParser import ConfigParser
 from argparse import ArgumentParser, FileType
 from urlparse import urljoin
 
-import urllib3
-
-
-
-
 class Submit(object):
     PATHS = {'auth':           'session',
              'file_item':      'file/{sha1sum}/_',
