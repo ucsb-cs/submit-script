@@ -11,6 +11,10 @@ from ConfigParser import ConfigParser
 from argparse import ArgumentParser, FileType
 from urlparse import urljoin
 
+import urllib3
+
+
+
 
 class Submit(object):
     PATHS = {'auth':           'session',
@@ -189,6 +193,7 @@ class Submit(object):
 
 
 def main():
+    requests.packages.urllib3.disable_warnings()
     parser = ArgumentParser()
     parser.add_argument('-c', '--config', default='DEFAULT')
     parser.add_argument('-p', '--project', required=True)
