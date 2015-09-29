@@ -188,7 +188,7 @@ class Submit(object):
 
 
 def main():
-    requests.packages.urllib3.disable_warnings()
+    #requests.packages.urllib3.disable_warnings()
     parser = ArgumentParser()
     parser.add_argument('-c', '--config', default='DEFAULT')
     parser.add_argument('-p', '--project', required=True)
